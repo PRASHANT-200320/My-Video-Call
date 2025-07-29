@@ -25,6 +25,7 @@
   display: flex;
   gap: 1.6rem;
   cursor: pointer;
+  font-weight: 500;
 
 }
 
@@ -44,14 +45,17 @@
   background: #D97500;
   width: fit-content;
   padding: 1rem;
-  border-radius: 20px;
+  border-radius: 10px;
   margin-top: 1.9rem;
+
 }
 
 .landingMainContainer>div:nth-child(1) div[role='button'] a {
   text-decoration: none;
   color: white;
   font-size: 1.7rem;
+  font-weight: 500;
+  
 }
 
 .landingMainContainer>div:nth-child(2) img {
@@ -95,4 +99,15 @@
   border-radius: 20px;
 }
 
+.landingMainContainer > div:nth-child(1) h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 3.5rem;
+}
 
+.landingMainContainer > div:nth-child(1) p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: wheat;
+}
