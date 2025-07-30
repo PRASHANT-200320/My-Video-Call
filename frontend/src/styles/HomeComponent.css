@@ -1,0 +1,86 @@
+.home-container {
+  min-height: 100vh;
+  background-color: #ecf0f3;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #ecf0f3;
+  box-shadow: inset 2px 2px 5px #d1d9e6, inset -5px -5px 10px #ffffff;
+}
+
+.navbar-title {
+  font-weight: bold;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.neumorphic-panel {
+  padding: 32px;
+  max-width: 500px;
+  border-radius: 16px;
+  background-color: #ecf0f3;
+  box-shadow: 9px 9px 16px #d1d9e6, -9px -9px 16px #ffffff;
+}
+
+.input-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.neumorphic-input .MuiOutlinedInput-root {
+  border-radius: 12px;
+  box-shadow: inset 3px 3px 6px #d1d9e6, inset -3px -3px 6px #ffffff;
+}
+
+.neumorphic-button {
+  padding: 12px 24px;
+  border-radius: 12px;
+  background-color: #ecf0f3;
+  box-shadow: 2px 2px 5px #d1d9e6, -5px -5px 10px #ffffff;
+  color: #333;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease;
+}
+
+.neumorphic-button:hover {
+  box-shadow: inset 2px 2px 5px #d1d9e6, inset -5px -5px 10px #ffffff;
+}
+
+.logo-section {
+  text-align: center;
+  max-width: 350px;
+}
+
+.neumorphic-logo {
+  width: 100%;
+  padding: 16px;
+  background-color: #ecf0f3;
+  border-radius: 12px;
+  box-shadow: 9px 9px 16px #d1d9e6, -9px -9px 16px #ffffff;
+}

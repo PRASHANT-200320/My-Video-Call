@@ -1,113 +1,130 @@
 .landingPageContainer {
   width: 100vw;
   height: 100vh;
-  background: url("/public/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
+  background: url("/public/background.png") center center / cover no-repeat;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", sans-serif;
 }
 
+/* Navbar Styling */
 .landingPageContainer nav {
-  padding-inline: 1.2rem;
-  padding-block: 1.6rem;
+  padding: 1.6rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .landingPageContainer nav h2 {
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
 }
 
-.landingPageContainer nav .navlist {
+.landingPageContainer .navlist {
   display: flex;
-  gap: 1.6rem;
+  gap: 2rem;
   cursor: pointer;
   font-weight: 500;
-
 }
 
+.navlist p,
+.navlist div p {
+  color: #ffd580;
+  transition: color 0.3s ease;
+}
+
+.navlist p:hover,
+.navlist div:hover p {
+  color: #ffae42;
+}
+
+/* Main Content Container */
 .landingMainContainer {
   display: flex;
   justify-content: space-between;
-  padding-inline: 3rem;
-  height: 80vh;
+  padding: 3rem;
+  height: calc(100vh - 140px);
   align-items: center;
+  gap: 4rem;
 }
 
-.landingMainContainer>div:nth-child(1) {
-  font-size: 2.2rem;
+/* Left Panel */
+.landingMainContainer > div:first-child {
+  max-width: 600px;
+  font-size: 2rem;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 16px;
 }
 
-.landingMainContainer>div:nth-child(1) div[role='button'] {
-  background: #D97500;
-  width: fit-content;
-  padding: 1rem;
+.landingMainContainer > div:first-child h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  white-space: normal;
+  color: #fff;
+}
+
+.landingMainContainer > div:first-child p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  color: #ffe6c7;
+}
+
+.landingMainContainer .cta-button {
+  background: #ff8c00;
+  padding: 0.8rem 1.6rem;
   border-radius: 10px;
-  margin-top: 1.9rem;
-
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: inline-block;
 }
 
-.landingMainContainer>div:nth-child(1) div[role='button'] a {
+.landingMainContainer .cta-button a {
   text-decoration: none;
-  color: white;
-  font-size: 1.7rem;
-  font-weight: 500;
-  
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: block;
 }
-
-.landingMainContainer>div:nth-child(2) img {
-  height: 70vh;
+/* Right Panel Image */
+.landingMainContainer > div:last-child img {
+  height: 60vh;
   width: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Utility Panels */
 .navBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 20px;
-  text-align: center;
-
+  padding: 0 20px;
 }
+
 .meetContainer {
   display: flex;
-  padding-inline: 20px;
+  padding: 0 20px;
   height: 80vh;
   gap: 10vw;
   justify-content: center;
 }
 
-
-
-.leftPanel {
-  height: 100%;
-  display: flex;
-  align-items: center;
-
-}
-
+.leftPanel,
 .rightPanel {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .rightPanel > img {
   width: 30vw;
   height: auto;
   border-radius: 20px;
-}
-
-.landingMainContainer > div:nth-child(1) h1 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 3.5rem;
-}
-
-.landingMainContainer > div:nth-child(1) p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  color: wheat;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
